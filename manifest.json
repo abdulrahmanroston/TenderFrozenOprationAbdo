@@ -1,0 +1,26 @@
+{
+  "name": "TenderFrozen",
+  "short_name": "Frozen Dashboard",
+  "start_url": "https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/acc.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a73e8",
+  "icons": [
+    {
+      "src": "https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/icons/icon1.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/icons/icon2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/icons/icon1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
