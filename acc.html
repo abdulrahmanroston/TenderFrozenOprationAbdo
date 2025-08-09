@@ -1865,6 +1865,9 @@
             }
         }
 
+
+        
+
         function showLoading(loadingId, textId, loadingText) {
             const loadingElement = document.getElementById(loadingId);
             const textElement = document.getElementById(textId);
@@ -2008,9 +2011,7 @@
                             <td>${expense.vault_name || '-'}</td>
                             <td>${formatDate(expense.created_at)}</td>
                             <td>
-                        <button class="btn btn-danger btn-sm" onclick="deleteExpense(${expense.id})">
-                            <i class="fas fa-trash"></i>
-                            </button>
+                                -
                             </td>
                             `;
 
