@@ -1033,7 +1033,7 @@
                 </div>
 
                 <!-- Vaults Section -->
-                <div id="vaultsSection" class="section">
+                <!-- <div id="vaultsSection" class="section">
                     <div id="vaultsAlert" style="display: none;"></div>
                     <div class="card">
                         <div class="card-header">
@@ -1078,7 +1078,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Vendors Section -->
                 <div id="vendorsSection" class="section">
@@ -1921,9 +1921,9 @@
                 if (data.status === 'success') {
                     const currency = data.data.currency || 'USD';
                     document.getElementById('cashBalance').textContent = `${currency} ${formatNumber(data.data.cash_balance)}`;
-                    document.getElementById('dailySales').textContent = `${currency} ${formatNumber(data.data.daily_sales.total)}`;
-                    document.getElementById('weeklySales').textContent = `${currency} ${formatNumber(data.data.weekly_sales.total)}`;
-                    document.getElementById('monthlySales').textContent = `${currency} ${formatNumber(data.data.monthly_sales.total)}`;
+                    document.getElementById('dailySales').textContent = ``; // ${currency} ${formatNumber(data.data.daily_sales.total)}
+                    document.getElementById('weeklySales').textContent = ``; // ${currency} ${formatNumber(data.data.weekly_sales.total)}
+                    document.getElementById('monthlySales').textContent = ``; // ${currency} ${formatNumber(data.data.monthly_sales.total)}
                 }
 
                 // Load recent transactions
@@ -1967,7 +1967,10 @@
                             <td>${transaction.vault_name || '-'}</td>
                             <td>${formatDate(transaction.created_at)}</td>
                         `;
-                        tbody.appendChild(row);
+
+                        if (transaction.employee_id === currentUser.id) {
+                            tbody.appendChild(row);
+                        }
                     });
                 }
             } catch (error) {
@@ -2421,7 +2424,7 @@
                         data.data.forEach(vault => {
                             const option = document.createElement('option');
                             option.value = vault.id;
-                            option.textContent = `${vault.name} (${formatNumber(vault.balance)})`;
+                            option.textContent = `${vault.name} `; // (${formatNumber(vault.balance)})
                             option.dataset.balance = vault.balance;
                             select.appendChild(option);
                         });
