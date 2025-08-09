@@ -4,15 +4,15 @@ self.addEventListener('install', (event) => {
     caches.open('tenderfrozen-cache-v2.1.7')
     .then((cache) => {
       return cache.addAll([
-        'https://abdulrahmanroston.github.io/TenderFrozen/',
-        'https://abdulrahmanroston.github.io/TenderFrozen/index.html',
-        'https://abdulrahmanroston.github.io/TenderFrozen/pos.html',
-        'https://abdulrahmanroston.github.io/TenderFrozen/products.html',
-        'https://abdulrahmanroston.github.io/TenderFrozen/acc.html',
-        'https://abdulrahmanroston.github.io/TenderFrozen/tf-navigation.js',
-        'https://abdulrahmanroston.github.io/TenderFrozen/icons/icon1.png',
-        'https://abdulrahmanroston.github.io/TenderFrozen/icons/icon2.png',
-        'https://abdulrahmanroston.github.io/TenderFrozen/icons/icon1.png'
+        'https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/',
+        'https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/index.html',
+        'https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/pos.html',
+        'https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/products.html',
+        'https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/acc.html',
+        'https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/tf-navigation.js',
+        'https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/icons/icon1.png',
+        'https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/icons/icon2.png',
+        'https://abdulrahmanroston.github.io/TenderFrozenOprationAbdo/icons/icon1.png'
       ]).then(() => {
         console.log('Service Worker: Cached all files successfully');
       }).catch((error) => {
