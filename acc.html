@@ -2011,7 +2011,7 @@
                             </td>
                             `;
 
-                    if (expense.employee_id !== currentUser.id) {
+                    if (expense.employee_id === currentUser.id) {
                         tbody.appendChild(row);
                     }
                     });
