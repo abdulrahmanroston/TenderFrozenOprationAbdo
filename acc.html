@@ -1990,24 +1990,30 @@
                         return;
                     }
 
+
+
+                    
                     data.data.forEach(expense => {
                         console.log(expense)
                         const row = document.createElement('tr');
                         row.innerHTML = `
-                            <td>${expense.employee_name}</td>
-                            <td>${expense.category_name || 'Uncategorized'}</td>
+                        <td>${expense.employee_name}</td>
+                        <td>${expense.category_name || 'Uncategorized'}</td>
                             <td>${formatNumber(expense.amount)}</td>
                             <td>${expense.description || '-'}</td>
                             <td>${expense.warehouse || '-'}</td>
                             <td>${expense.vault_name || '-'}</td>
                             <td>${formatDate(expense.created_at)}</td>
                             <td>
-                                <button class="btn btn-danger btn-sm" onclick="deleteExpense(${expense.id})">
-                                    <i class="fas fa-trash"></i>
-                                </button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteExpense(${expense.id})">
+                            <i class="fas fa-trash"></i>
+                            </button>
                             </td>
-                        `;
+                            `;
+
+                    if (expense.employee_id !== currentUser.id) {
                         tbody.appendChild(row);
+                    }
                     });
 
                     // Update pagination
